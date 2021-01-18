@@ -1,0 +1,63 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 10%;
+}
+
+nav {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-bottom: solid 1px #c9c9c9;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px 5rem;
+  border-radius: .5rem;
+  background-color: #eee;
+}
+
+.campgrounds {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.campgrounds img {
+  width: 250px;
+}
+
+.card {
+  padding: 1rem;
+  text-align: center;
+  border: solid 1px rgb(168, 168, 168);
+  border-radius: .5rem;
+}
+
+.cg-img {
+  margin: 1rem 30%;
+}
