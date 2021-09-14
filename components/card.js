@@ -15,13 +15,17 @@ const Card = ({ campground }) => {
             <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
                 <a>
                     <div>
-                        <h1>{campground.name}</h1>
                         <img src={campground.image} />
                     </div>
                 </a>
             </Link>
             <div>
-                    <p>{campgroundExcerpt}</p>
+                <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
+                    <a>
+                        <h1>{campground.name}</h1>
+                    </a>
+                </Link>
+                <p>{campgroundExcerpt}</p>
             </div>
         </div>
     )
