@@ -6,9 +6,8 @@ const Campgrounds = ({ campgrounds }) => {
         <div className="campgrounds">
             {campgrounds.map((campground) => {
                 return (
-                    <div className="card">
+                    <div className="card" key={campground._id}>
                         <Card 
-                            key={campground._id}
                             campground={campground} 
                             />
                     </div>
