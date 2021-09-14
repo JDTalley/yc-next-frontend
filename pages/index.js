@@ -1,5 +1,6 @@
 import React from "react"
 import Nav from "../components/nav"
+import Header from "../components/header"
 import Layout from "../components/layout"
 import { fetchAPI } from "../lib/api"
 
@@ -7,6 +8,7 @@ const Home = ({ campgrounds }) => {
   return (
     <div>
       <Nav />
+      <Header />
       <Layout campgrounds={campgrounds} />
     </div>
   )
