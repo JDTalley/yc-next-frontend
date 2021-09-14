@@ -6,11 +6,9 @@ const Campgrounds = ({ campgrounds }) => {
         <div className="campgrounds">
             {campgrounds.map((campground) => {
                 return (
-                    <div className="card" key={campground._id}>
-                        <Card 
-                            campground={campground} 
-                            />
-                    </div>
+                    <Card 
+                        campground={campground} 
+                        />
                 )
             })}
         </div>

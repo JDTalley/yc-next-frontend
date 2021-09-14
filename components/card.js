@@ -2,15 +2,28 @@ import React from "react"
 import Link from "next/link"
 
 const Card = ({ campground }) => {
+    let campgroundExcerpt = ''
+
+    if (campground.description.length > 50) {
+        campgroundExcerpt = campground.description.slice(0,50) + '...'
+    } else {
+        campgroundExcerpt = campground.description
+    }
+
     return (
-        <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
-            <a>
-                <div>
-                    <h1>{campground.name}</h1>
-                    <img src={campground.image} />
-                </div>
-            </a>
-        </Link>
+        <div className="card" key={campground._id}>
+            <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
+                <a>
+                    <div>
+                        <h1>{campground.name}</h1>
+                        <img src={campground.image} />
+                    </div>
+                </a>
+            </Link>
+            <div>
+                    <p>{campgroundExcerpt}</p>
+            </div>
+        </div>
     )
 }
 
