@@ -1,7 +1,10 @@
 import React from "react"
 import GoogleMapReact from 'google-map-react'
+import Config from '../config.js'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
+
+console.log(process.env.GOOGLE_APIKey)
 
 const APIKey = process.env.GOOGLE_APIKey || ''
 
