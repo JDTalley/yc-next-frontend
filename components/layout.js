@@ -1,11 +1,12 @@
 import React from "react"
-import { render } from "react-dom"
 import Campgrounds from "./campgrounds"
+import Map from "./map"
 
 const Layout = ({ campgrounds }) => {
     return (
         <div className="container">
             <Campgrounds campgrounds={campgrounds[0].campgrounds} />
+            <Map />
         </div>
     )
 }
