@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
-const APIKey = process.env.NEXT_PUBLIC_GOOGLE_APIKey || ''
+const APIKey = process.env.NEXT_PUBLIC_GOOGLE_APIKey || process.env.NEXT_PUBLIC_GOOGLE_DEVAPIKEY
 
 export default function Map(){
   const defaultProps = {
