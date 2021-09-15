@@ -9,7 +9,7 @@ const CampgroundPage = (campground) => {
             <div className="container">
                 <h1>{campground.name}</h1>
                 <div className="cg-img">
-                    <img src={campground.image} />
+                    <img src={campground.image} alt={campground.name + " Image"} />
                 </div>
                 <p>{campground.description}</p>
             </div>

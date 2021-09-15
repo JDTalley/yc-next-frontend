@@ -3,12 +3,14 @@ import Card from "./card"
 
 const Campgrounds = ({ campgrounds }) => {
     return (
-        <div className="campgrounds">
+        <div>
             {campgrounds.map((campground) => {
                 return (
-                    <Card 
-                        campground={campground} 
-                        />
+                    <div className="campgrounds" key={campground._id}>
+                        <Card 
+                            campground={campground} 
+                            />
+                    </div>
                 )
             })}
         </div>
