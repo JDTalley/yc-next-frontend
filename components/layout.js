@@ -6,7 +6,7 @@ const Layout = ({ campgrounds }) => {
     return (
         <div className="container">
             <Campgrounds campgrounds={campgrounds[0].campgrounds} />
-            <Map />
+            <Map campgrounds={campgrounds[0].campgrounds} />
         </div>
     )
 }
