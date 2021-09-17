@@ -7,43 +7,43 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>
 const APIKey = process.env.NEXT_PUBLIC_GOOGLE_APIKEY || process.env.NEXT_PUBLIC_GOOGLE_DEVAPIKEY
 
 const Map = ({ campgrounds }) => {
+  const latCenter = campgrounds.reduce((a, b) => {
+    return a + parseFloat(b.lat)
+  }, 0) / campgrounds.length
+
+  const longCenter = campgrounds.reduce((a, b) => {
+    return a + parseFloat(b.long)
+  }, 0) / campgrounds.length
+
   const mapDefaults = {
     center: {
-      lat: 37.255067,
-      lng: -80.410403
+      lat: latCenter,
+      lng: longCenter
     },
     zoom: 11
   }
 
-  const markers = campgrounds.map((campground) => {
-    return (
-      `<MapMarker
-          lat=${campground.lat}
-          long=${campground.long}
-          name=${campground.name}
-          />`
-    )
-  })
-
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-      <GoogleMap
-        bootstrapURLKeys={{ key: APIKey }}
-        defaultCenter={mapDefaults.center}
-        defaultZoom={mapDefaults.zoom}
-        >
-          {campgrounds.map((campground) => {
-            return (
-              <MapMarker
-                lat={parseFloat(campground.lat)}
-                lng={parseFloat(campground.long)}
-                name={campground.name}
-                key={campground._id}
-                />
-            )
-          })}
+    <div className="map">
+      <div style={{ height: '100%', width: '100%' }}>
+        <GoogleMap
+          bootstrapURLKeys={{ key: APIKey }}
+          defaultCenter={mapDefaults.center}
+          defaultZoom={mapDefaults.zoom}
+          >
+            {campgrounds.map((campground) => {
+              return (
+                <MapMarker
+                  lat={parseFloat(campground.lat)}
+                  lng={parseFloat(campground.long)}
+                  name={campground.name}
+                  key={campground._id}
+                  />
+              )
+            })}
 
-        </GoogleMap>
+          </GoogleMap>
+      </div>
     </div>
   )
 }

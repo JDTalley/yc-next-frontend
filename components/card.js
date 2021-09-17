@@ -19,10 +19,10 @@ const Card = ({ campground }) => {
                     </div>
                 </a>
             </Link>
-            <div>
+            <div className="campground-info-card">
                 <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
                     <a>
-                        <h1>{campground.name}</h1>
+                        <h3>{campground.name}</h3>
                     </a>
                 </Link>
                 <p>{campgroundExcerpt}</p>

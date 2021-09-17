@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
-body {
+body,
+h1,
+h2,
+h3 {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -14,20 +21,17 @@ img {
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem 10%;
-}
-
 nav {
   background-color: #f8f8f8;
   padding: 1rem;
   border-bottom: solid 1px #c9c9c9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1rem 1rem;
 }
 
 .header {
@@ -35,8 +39,12 @@ nav {
   flex-direction: column;
   margin: auto;
   text-align: center;
-  padding: 0;
+  padding: 1rem 0;
   background-color: #eee;
+}
+
+.map {
+  display: none;
 }
 
 .map-marker {
@@ -60,11 +68,21 @@ nav {
 .card {
   display: flex;
   padding: 1rem;
-  text-align: center;
-  border: solid 1px rgb(168, 168, 168);
-  border-radius: .5rem;
+  border: solid 1px rgb(168, 168, 168, .3);
+  border-radius: 5px;
 }
 
-.cg-img {
-  margin: 1rem 30%;
+.campground-info-card {
+  padding: 0 1rem;
+}
+
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .map {
+    display: block;
+    width: 40%;
+  }
 }
