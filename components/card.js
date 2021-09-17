@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 
-const Card = ({ campground }) => {
+const Card = ({ campground, index }) => {
     let campgroundExcerpt = ''
 
     if (campground.description.length > 50) {
@@ -22,7 +22,7 @@ const Card = ({ campground }) => {
             <div className="campground-info-card">
                 <Link as={`/campground/${campground._id}`} href="`/campground/[id]`">
                     <a>
-                        <h3>{campground.name}</h3>
+                        <h3>{index + 1}. {campground.name}</h3>
                     </a>
                 </Link>
                 <p>{campgroundExcerpt}</p>

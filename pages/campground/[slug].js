@@ -6,9 +6,9 @@ const CampgroundPage = (campground) => {
     return (
         <div>
             <Nav />
-            <div className="container">
+            <div className="container-full">
                 <h1>{campground.name}</h1>
-                <div className="cg-img">
+                <div className="campground-img-full">
                     <img src={campground.image} alt={campground.name + " Image"} />
                 </div>
                 <p>{campground.description}</p>

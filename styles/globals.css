@@ -6,7 +6,8 @@ html,
 body,
 h1,
 h2,
-h3 {
+h3,
+p {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -34,6 +35,18 @@ nav {
   margin: 1rem 1rem;
 }
 
+.container-full {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+.campground-img-full {
+  width: 300px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -49,8 +62,15 @@ nav {
 
 .map-marker {
   position: absolute;
-  border: .6em solid #3662f4;
-  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 134, 205, 1);
+  width: 2em;
+  height: 2em;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
 }
 
 .campgrounds {

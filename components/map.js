@@ -31,13 +31,14 @@ const Map = ({ campgrounds }) => {
           defaultCenter={mapDefaults.center}
           defaultZoom={mapDefaults.zoom}
           >
-            {campgrounds.map((campground) => {
+            {campgrounds.map((campground, index) => {
               return (
                 <MapMarker
                   lat={parseFloat(campground.lat)}
                   lng={parseFloat(campground.long)}
                   name={campground.name}
                   key={campground._id}
+                  index={index}
                   />
               )
             })}
